@@ -22,9 +22,17 @@ For each image in the dataset, an associated bounding box (i.e. (x, y)-coordinat
 ```python
 pip install dlib
 ```
+
 2. (OPTIONAL) Install cv2. Since I have only used opencv to draw rectange and show images you can substitue it with any library you wish. 
 There is an amazing guide to install opencv on your mac, RaspberryPi or ubuntu machine by Adrian Rosebrook, [Install opencv](https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/).
 
+
+3. Scipy, imutils and skimage required
+```python
+pip install scipy
+pip install imutils
+pip install skimage
+```
 
 
 ## Runing the Code
@@ -38,4 +46,27 @@ $ python train_detector.py --class stop_sign --annotations stop_sign_annotations
 
 **it would look something like this**
 
-![Img](/results/dumping classifier.png)
+![Img](/results/dumping_classifier.png)
+
+2. The second step is to test out detector by running test_detector.py. **I have uploaded few test images for stop signs, if you are training on a different object class you have to collect test images yourself **
+
+```
+python test_detector.py --detector output/stop_sign_detector.svm --testing stop_sign_testing
+```
+## Results
+
+![Img](/results/ex1.png)
+
+
+![Img](/results/ex2.png)
+
+
+![Img](/results/ex3.png)
+
+### Author
+* Kaushal Bhavsar
+
+
+### Acknowledgments
+
+This project is inspired by work of Adrian Rosebrook, Owner, author at PyImageSearch.com. 
