@@ -1,4 +1,4 @@
-# simple_object_detector
+# Simple Object Detector using dlib
 
 This is repository containing code of simple object detection method using dlib
 
